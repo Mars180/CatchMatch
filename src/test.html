@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>CatchMatch | Home</title>
+</head>
+
+<!-- Code is here -->
+<div class="flex space-x-4">
+  <button id="btn-option1" class="option-btn px-4 py-2 border rounded-lg transition">
+      Option 1
+  </button>
+  <button id="btn-option2" class="option-btn px-4 py-2 border rounded-lg transition">
+      Option 2
+  </button>
+</div>
+
+<!-- Continue Button (Hidden by Default) -->
+<button id="continue-btn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hidden">
+  Continue
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btnOption1 = document.getElementById("btn-option1");
+  const btnOption2 = document.getElementById("btn-option2");
+  const continueBtn = document.getElementById("continue-btn");
+
+  function toggleSelection(button) {
+      button.classList.toggle("bg-blue-600");
+      button.classList.toggle("text-white");
+      button.classList.toggle("border-blue-600");
+  }
+
+  function updateContinueButton() {
+      if (btnOption1.classList.contains("bg-blue-600") || btnOption2.classList.contains("bg-blue-600")) {
+          continueBtn.classList.remove("hidden");
+      } else {
+          continueBtn.classList.add("hidden");
+      }
+  }
+
+  btnOption1.addEventListener("click", function () {
+      toggleSelection(btnOption1);
+      updateContinueButton();
+  });
+
+  btnOption2.addEventListener("click", function () {
+      toggleSelection(btnOption2);
+      updateContinueButton();
+  });
+
+  continueBtn.addEventListener("click", function () {
+      let selectedOptions = [];
+      if (btnOption1.classList.contains("bg-blue-600")) selectedOptions.push("Option 1");
+      if (btnOption2.classList.contains("bg-blue-600")) selectedOptions.push("Option 2");
+
+      alert("Proceeding with: " + selectedOptions.join(" & "));
+      // Replace with actual navigation logic
+      // window.location.href = "/results?selected=" + selectedOptions.join(",");
+  });
+});
+</script>
+
+</body>
+</html>

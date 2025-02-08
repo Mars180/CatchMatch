@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>CatchMatch</title>
+</head>
+
+<!-- Code is here -->
+<body class="bg-[url('https://media.istockphoto.com/id/1210270993/vector/blue-sea-background.jpg?s=612x612&w=0&k=20&c=-QE2caupyoLL6CRwQfwai5YUjJPVSxJU9tflZhobcM8=')] bg-no-repeat bg-cover">
+<div class="flex h-screen"> 
+  <div class="m-auto">
+    <h1 class="text-3xl font-[Georgia] text-center">
+      What kind of Shellfish?
+    </h1>
+
+    <div class="flex justify-center pt-5 gap-5">
+        <button id="crustaceanBtn" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Crustacean</button>
+        <button id="mulloskBtn" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Mullosk</button>
+    </div>
+
+    <!-- Continue button will pop up when a button is click -->
+    <button id="continue-btn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hidden">
+      Continue
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btnOption1 = document.getElementById("crustaceanBtn");
+        const btnOption2 = document.getElementById("mulloskBtn");
+        const continueBtn = document.getElementById("continue-btn");
+      
+        function toggleSelection(button) {
+            button.classList.toggle("rounded-lg bg-[#e6e9f3] h-full sm:h-20 py-4 my-10 flex items-center justify-center shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)]");
+            button.classList.toggle("border-blue-600");
+        }
+      
+        function updateContinueButton() {
+            if (btnOption1.classList.contains("bg-blue-600") || btnOption2.classList.contains("bg-blue-600")) {
+                continueBtn.classList.remove("hidden");
+            } else {
+                continueBtn.classList.add("hidden");
+            }
+        }
+      
+        btnOption1.addEventListener("click", function () {
+            toggleSelection(btnOption1);
+            updateContinueButton();
+        });
+      
+        btnOption2.addEventListener("click", function () {
+            toggleSelection(btnOption2);
+            updateContinueButton();
+        });
+      
+        continueBtn.addEventListener("click", function () {
+            let selectedOptions = [];
+            if (btnOption1.classList.contains("bg-blue-600")) selectedOptions.push("Option 1");
+            if (btnOption2.classList.contains("bg-blue-600")) selectedOptions.push("Option 2");
+      
+            alert("Proceeding with: " + selectedOptions.join(" & "));
+            // Replace with actual navigation logic
+            // window.location.href = "/results?selected=" + selectedOptions.join(",");
+        });
+      });
+      </script>
+
+  </div>
+
+</body>
+</html>

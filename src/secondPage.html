@@ -8,21 +8,39 @@
 </head>
 
 <!-- Code is here -->
-<body class="bg-[url('https://media.istockphoto.com/id/1210270993/vector/blue-sea-background.jpg?s=612x612&w=0&k=20&c=-QE2caupyoLL6CRwQfwai5YUjJPVSxJU9tflZhobcM8=')] bg-no-repeat bg-cover">    
-   
-  <div class="flex h-screen"> 
-    <div class="m-auto">
-        <h1 class="text-[40px] text-black font-[Georgia] text-center pt-10">
-      <p>Alright! </p>
-      <p>What are you fishin' for?</p>
+<body class="bg-[url('https://media.istockphoto.com/id/1210270993/vector/blue-sea-background.jpg?s=612x612&w=0&k=20&c=-QE2caupyoLL6CRwQfwai5YUjJPVSxJU9tflZhobcM8=')] bg-no-repeat bg-cover">
+
+<!-- Functionality of the page -->
+<div class="flex h-screen"> 
+  <div class="m-auto">
+    <h1 class="text-3xl font-[Georgia]">
+      How local do you want your vendor to be?
     </h1>
-  
-    <h2 class="text-center py-5">
-      <button type="Button" class="text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-lg text-sm px-10 py-5 text-center me-2 mb-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.3)]">Wholesale</button>
-      <button type="Button" class="text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-lg text-sm px-10 py-5 text-center me-2 mb-2 drop-shadow-[0_35px_35px_rgba(255,255,255,0.3)]">Marketplace</button>
-    </h2>
+    <p class="flex justify-center font-[Georgia] m-1">
+      Because we want to know how far you want to swim...
+    </p>
+
+    <!-- Location Slider -->
+    <div class="m-auto flex-col space-y-2 p-2 w-80 pt-4">
+      <input type="range" class="w-full" min="1" max="6" step="1" />
+      <ul class="flex justify-between w-full px-[10px]">
+        <li class="flex justify-center relative"><span class="absolute">5</span></li>
+        <li class="flex justify-center relative"><span class="absolute">10</span></li>
+        <li class="flex justify-center relative"><span class="absolute">15</span></li>
+        <li class="flex justify-center relative"><span class="absolute">20</span></li>
+        <li class="flex justify-center relative"><span class="absolute">25</span></li>
+        <li class="flex justify-center relative"><span class="absolute">30+</span></li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center pt-10">
+      <a href="http://127.0.0.1:5500/src/thirdPage.html" type="Button" class="text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow">Continue</a>
+    </div> 
   </div>
 </div>
-  
-  </body>
+
+<script type="text/javascript" src="/src/backEnd.js"></script>
+
+
+</body>
 </html>
