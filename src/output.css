@@ -617,6 +617,15 @@
   .isolation-auto {
     isolation: auto;
   }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .z-100 {
+    z-index: 100;
+  }
   .z-auto {
     z-index: auto;
   }
@@ -728,6 +737,15 @@
   .m-6 {
     margin: calc(var(--spacing) * 6);
   }
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
+  .m-50 {
+    margin: calc(var(--spacing) * 50);
+  }
+  .m-auto {
+    margin: auto;
+  }
   .me-2 {
     margin-inline-end: calc(var(--spacing) * 2);
   }
@@ -823,6 +841,14 @@
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
+  }
+  .size-32 {
+    width: calc(var(--spacing) * 32);
+    height: calc(var(--spacing) * 32);
+  }
+  .size-100 {
+    width: calc(var(--spacing) * 100);
+    height: calc(var(--spacing) * 100);
   }
   .h-2 {
     height: calc(var(--spacing) * 2);
@@ -1426,6 +1452,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
   .border-x {
     border-inline-style: var(--tw-border-style);
     border-inline-width: 1px;
@@ -1497,6 +1527,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-blue-200 {
+    background-color: var(--color-blue-200);
+  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
@@ -1534,8 +1567,17 @@
   .bg-\[url\(\'https\:\/\/4kwallpapers\.com\/images\/wallpapers\/underwater-sun-rays-ocean-hawaii-5k-8k-6016x3384-8301\.jpg\'\)\] {
     background-image: url('https://4kwallpapers.com/images/wallpapers/underwater-sun-rays-ocean-hawaii-5k-8k-6016x3384-8301.jpg');
   }
+  .bg-\[url\(\'https\:\/\/blogger\.googleusercontent\.com\/img\/b\/R29vZ2xl\/AVvXsEiwAxtq58xgbsT5zM6u5O85XTd683NUibHTB33V7kih9rHM3bOyjiR-AgjpSRcHRqdMSim2QHQIoXsfMVDttpimDPuRKhwiOwyYta4FOvCJQVFY7UXc2amAsc18iUNobkObv7WB9ufRC1reKtMbFgdSDjIayvINQWseSaKe1XOGk8Jf8DKlkRQ8mvsLceIz\/s1600-rw\/minimalist-ocean-waves-pastel-sun-wallpaper-4k-pc\.jpg\'\)\] {
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwAxtq58xgbsT5zM6u5O85XTd683NUibHTB33V7kih9rHM3bOyjiR-AgjpSRcHRqdMSim2QHQIoXsfMVDttpimDPuRKhwiOwyYta4FOvCJQVFY7UXc2amAsc18iUNobkObv7WB9ufRC1reKtMbFgdSDjIayvINQWseSaKe1XOGk8Jf8DKlkRQ8mvsLceIz/s1600-rw/minimalist-ocean-waves-pastel-sun-wallpaper-4k-pc.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/media\.istockphoto\.com\/id\/1210270993\/vector\/blue-sea-background\.jpg\?s\=612x612\&w\=0\&k\=20\&c\=-QE2caupyoLL6CRwQfwai5YUjJPVSxJU9tflZhobcM8\=\'\)\] {
+    background-image: url('https://media.istockphoto.com/id/1210270993/vector/blue-sea-background.jpg?s=612x612&w=0&k=20&c=-QE2caupyoLL6CRwQfwai5YUjJPVSxJU9tflZhobcM8=');
+  }
   .bg-\[url\(\'https\:\/\/media\.istockphoto\.com\/id\/1371714013\/vector\/seamless-flawing-background\.jpg\?s\=612x612\&w\=0\&k\=20\&c\=mDJvhytor_nKIiKrk7kZKVUuJYsV8ASbEx82fzzHa28\=\'\)\] {
     background-image: url('https://media.istockphoto.com/id/1371714013/vector/seamless-flawing-background.jpg?s=612x612&w=0&k=20&c=mDJvhytor_nKIiKrk7kZKVUuJYsV8ASbEx82fzzHa28=');
+  }
+  .bg-\[url\(\'https\:\/\/wallpapercave\.com\/wp\/wp11454235\.jpg\'\)\] {
+    background-image: url('https://wallpapercave.com/wp/wp11454235.jpg');
   }
   .bg-\[url\(\'https\:\/\/wallpapers-clan\.com\/wp-content\/uploads\/2023\/11\/corals-fish-underwater-desktop-wallpaper-preview\.jpg\'\)\] {
     background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/corals-fish-underwater-desktop-wallpaper-preview.jpg');
@@ -1714,6 +1756,12 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -1725,6 +1773,15 @@
   }
   .px-50 {
     padding-inline: calc(var(--spacing) * 50);
+  }
+  .px-70 {
+    padding-inline: calc(var(--spacing) * 70);
+  }
+  .px-95 {
+    padding-inline: calc(var(--spacing) * 95);
+  }
+  .px-100 {
+    padding-inline: calc(var(--spacing) * 100);
   }
   .px-\[10px\] {
     padding-inline: 10px;
@@ -1750,8 +1807,17 @@
   .py-30 {
     padding-block: calc(var(--spacing) * 30);
   }
+  .py-50 {
+    padding-block: calc(var(--spacing) * 50);
+  }
+  .pt-5 {
+    padding-top: calc(var(--spacing) * 5);
+  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pt-30 {
     padding-top: calc(var(--spacing) * 30);
@@ -1776,6 +1842,51 @@
   }
   .pt-100 {
     padding-top: calc(var(--spacing) * 100);
+  }
+  .pr-20 {
+    padding-right: calc(var(--spacing) * 20);
+  }
+  .pr-30 {
+    padding-right: calc(var(--spacing) * 30);
+  }
+  .pr-100 {
+    padding-right: calc(var(--spacing) * 100);
+  }
+  .pr-200 {
+    padding-right: calc(var(--spacing) * 200);
+  }
+  .pr-500 {
+    padding-right: calc(var(--spacing) * 500);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-25 {
+    padding-bottom: calc(var(--spacing) * 25);
+  }
+  .pb-30 {
+    padding-bottom: calc(var(--spacing) * 30);
+  }
+  .pb-50 {
+    padding-bottom: calc(var(--spacing) * 50);
+  }
+  .pb-70 {
+    padding-bottom: calc(var(--spacing) * 70);
+  }
+  .pb-520 {
+    padding-bottom: calc(var(--spacing) * 520);
+  }
+  .pl-0 {
+    padding-left: calc(var(--spacing) * 0);
+  }
+  .pl-20 {
+    padding-left: calc(var(--spacing) * 20);
+  }
+  .pl-100 {
+    padding-left: calc(var(--spacing) * 100);
   }
   .text-center {
     text-align: center;
