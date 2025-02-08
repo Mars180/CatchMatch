@@ -1,40 +1,39 @@
-// fake data set for demo
-let suppliers = new Map([
-    ["supplierOne", ["Wholesale", "5", "Shellfish", "Crustacean"]],
-    ["supplierTwo", ["Wholesale", "5", "Shellfish", "Crustacean"]],
-    ["supplierThree", ["Wholesale", "30", "Shellfish", "Mullosk"]],
-    ["supplierFour", ["Market", "10", "Fish", "Crustacean"]],
-    ["supplierFive", ["Market", "15", "Fish", "Mullosk"]]
-]);
-
-let userList = ["Wholesale", "5", "Shellfish", "Crustacean"];
-
-function bizInfo (value) {
-   //userList.push(value); 
-   console.log(value); 
+function compare(listOne, listTwo) {
+    for (let i = 0; i < listOne.length; i++) {
+        if (listOne[i] != listTwo[i]) {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
-let valid = 0;
+let userList = [];
+
+function bizInfo(value) {
+    userList.push(value);t.push(value);
+}
+
+// fake data set for demo
+let suppliers = new Map([
+    [0, ["Wholesale", "5", "Shellfish", "Crustacean"]],
+    [1, ["Wholesale", "5", "Shellfish", "Crustacean"]],
+    [2, ["Wholesale", "30", "Shellfish", "Mullosk"]],
+    [3, ["Market", "10", "Fish", "Crustacean"]],
+    [4, ["Market", "15", "Fish", "Mullosk"]]
+]);
+
 let validList = [];
-if (userList.length == 4) {
-    for (let i = 0; i < suppliers.length; i++) {
-        if (valid == 4) {
-            validList.push(suppliers[i])
-        }
-        else {
-            for (let j = 0; j < suppliers[i].length; j++) {
-                if (suppliers[i][j] != userList[j]) {
-                    break;
-                    valid = 0;
-                }
-                else {
-                    valid += 1;
-                }
-            }
+
+for (let i = 0; i < suppliers.size; i++) {
+    if (suppliers.get(i).length == 4) {
+        let valid = compare(userList, suppliers.get(i));
+        
+        if (valid == true) {
+            validList.push(suppliers.get(i));
         }
     }
 }
-
-for (let i = 0; i < validList.length; i++) {
-    console.log(validList[i]);
+function continueBtn(){
+    
 }
