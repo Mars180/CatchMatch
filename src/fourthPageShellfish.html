@@ -16,31 +16,39 @@
     </h1>
 
     <div class="flex justify-center pt-5 gap-5">
-        <button id="crustaceanBtn" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Crustacean</button>
-        <button id="mulloskBtn" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Mullosk</button>
+        <button id="crustaceanBtn" value="Crustacean" onclick="bizInfo(this.value)" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Crustacean</button>
+        <button id="molluskBtn" value="mollusk" onclick="bizInfo(this.value)" class="option-btn text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px]">Mollusk</button>
     </div>
 
     <!-- Continue button will pop up when a button is click -->
-    <button id="continue-btn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hidden">
-      Continue
-    </button>
+    <div class="flex justify-center">
+      <a href="http://127.0.0.1:5500/src/firstPage.html" type="Button" id="continue-btn" class="pt-5 mt-4 px-4 py-2 bg-blue-500 text-[20px] font-[Georgia] text-white font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow min-w-[120px] hidden">Continue</a>
+    </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const btnOption1 = document.getElementById("crustaceanBtn");
-        const btnOption2 = document.getElementById("mulloskBtn");
+        const btnOption2 = document.getElementById("molluskBtn");
         const continueBtn = document.getElementById("continue-btn");
-      
+        
         function toggleSelection(button) {
-            button.classList.toggle("rounded-lg bg-[#e6e9f3] h-full sm:h-20 py-4 my-10 flex items-center justify-center shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.1)]");
-            button.classList.toggle("border-blue-600");
+        const isSelected = button.classList.contains("bg-blue-500");
+
+          button.classList.remove("bg-gradient-to-br", "from-green-400", "to-blue-600", "hover:bg-gradient-to-bl");
+
+          if (isSelected) {
+              button.classList.add("bg-gradient-to-br", "from-green-400", "to-blue-600", "hover:bg-gradient-to-bl", "text-white");
+              button.classList.remove("bg-blue-500", "text-black");
+          } else {
+              button.classList.add("bg-blue-500", "text-black");
+          }
         }
       
         function updateContinueButton() {
-            if (btnOption1.classList.contains("bg-blue-600") || btnOption2.classList.contains("bg-blue-600")) {
+            if (btnOption1.classList.contains("bg-blue-500") || btnOption2.classList.contains("bg-blue-500")) {
                 continueBtn.classList.remove("hidden");
             } else {
-                continueBtn.classList.add("hidden");
+              continueBtn.classList.add("hidden");
             }
         }
       
@@ -56,12 +64,10 @@
       
         continueBtn.addEventListener("click", function () {
             let selectedOptions = [];
-            if (btnOption1.classList.contains("bg-blue-600")) selectedOptions.push("Option 1");
-            if (btnOption2.classList.contains("bg-blue-600")) selectedOptions.push("Option 2");
+            if (btnOption1.classList.contains("bg-blue-500")) selectedOptions.push("Option 1");
+            if (btnOption2.classList.contains("bg-blue-500")) selectedOptions.push("Option 2");
       
-            alert("Proceeding with: " + selectedOptions.join(" & "));
-            // Replace with actual navigation logic
-            // window.location.href = "/results?selected=" + selectedOptions.join(",");
+            //alert("Proceeding with: " + selectedOptions.join(" & "));
         });
       });
       </script>
