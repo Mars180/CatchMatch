@@ -722,6 +722,9 @@
       max-width: 96rem !important;
     }
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .m-6 {
     margin: calc(var(--spacing) * 6);
   }
@@ -1365,6 +1368,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -1503,6 +1509,9 @@
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
   .-bg-conic {
     --tw-gradient-position: in oklab;
     background-image: conic-gradient(var(--tw-gradient-stops));
@@ -1521,6 +1530,12 @@
   }
   .bg-\[url\(\'\'\)\] {
     background-image: url('');
+  }
+  .bg-\[url\(\'https\:\/\/4kwallpapers\.com\/images\/wallpapers\/underwater-sun-rays-ocean-hawaii-5k-8k-6016x3384-8301\.jpg\'\)\] {
+    background-image: url('https://4kwallpapers.com/images/wallpapers/underwater-sun-rays-ocean-hawaii-5k-8k-6016x3384-8301.jpg');
+  }
+  .bg-\[url\(\'https\:\/\/media\.istockphoto\.com\/id\/1371714013\/vector\/seamless-flawing-background\.jpg\?s\=612x612\&w\=0\&k\=20\&c\=mDJvhytor_nKIiKrk7kZKVUuJYsV8ASbEx82fzzHa28\=\'\)\] {
+    background-image: url('https://media.istockphoto.com/id/1371714013/vector/seamless-flawing-background.jpg?s=612x612&w=0&k=20&c=mDJvhytor_nKIiKrk7kZKVUuJYsV8ASbEx82fzzHa28=');
   }
   .bg-\[url\(\'https\:\/\/wallpapers-clan\.com\/wp-content\/uploads\/2023\/11\/corals-fish-underwater-desktop-wallpaper-preview\.jpg\'\)\] {
     background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/corals-fish-underwater-desktop-wallpaper-preview.jpg');
@@ -1708,6 +1723,9 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .px-50 {
+    padding-inline: calc(var(--spacing) * 50);
+  }
   .px-\[10px\] {
     padding-inline: 10px;
   }
@@ -1752,6 +1770,9 @@
   }
   .pt-80 {
     padding-top: calc(var(--spacing) * 80);
+  }
+  .pt-90 {
+    padding-top: calc(var(--spacing) * 90);
   }
   .pt-100 {
     padding-top: calc(var(--spacing) * 100);
@@ -1813,8 +1834,14 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .text-\[20px\] {
     font-size: 20px;
+  }
+  .text-\[30px\] {
+    font-size: 30px;
   }
   .text-\[40px\] {
     font-size: 40px;
@@ -1914,6 +1941,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -2066,6 +2096,9 @@
   .scheme-only-light {
     color-scheme: only light;
   }
+  .opacity-70 {
+    opacity: 70%;
+  }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
   }
@@ -2082,6 +2115,10 @@
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-xl {
@@ -2117,8 +2154,24 @@
     --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow( 0 1px 1px rgb(0 0 0 / 0.06));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .drop-shadow-\[0_35px_35px_rgba\(0\,0\,0\,0\.25\)\] {
+    --tw-drop-shadow: drop-shadow(0 35px 35px rgba(0,0,0,0.25));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-\[0_35px_35px_rgba\(255\,255\,255\,0\.3\)\] {
+    --tw-drop-shadow: drop-shadow(0 35px 35px rgba(255,255,255,0.3));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-lg {
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-lg));
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .drop-shadow-none {
     --tw-drop-shadow:  ;
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .drop-shadow-xl {
+    --tw-drop-shadow: drop-shadow(var(--drop-shadow-xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .drop-shadow-xs {
