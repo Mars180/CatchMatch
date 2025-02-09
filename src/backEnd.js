@@ -11,7 +11,23 @@ function compare(listOne, listTwo) {
 let userList = [];
 
 function bizInfo(value) {
-    userList.push(value);t.push(value);
+    userList.push(value);
+    //t.push(value);
+}
+
+function continueBtn(){
+    // const btnOption1 = document.getElementById("crustaceanBtn");
+    // const btnOption2 = document.getElementById("molluskBtn");
+
+    // button1color = btnOption1.
+
+    // if ( &&){
+    //     bizInfo("Both");
+    // } else if (){
+    //     bizInfo("Mollusk");
+    // } else if () {
+    bizInfo("Crustacean");
+    // }
 }
 
 // fake data set for demo
@@ -26,14 +42,12 @@ let suppliers = new Map([
 let validList = [];
 
 for (let i = 0; i < suppliers.size; i++) {
-    if (suppliers.get(i).length == 4) {
+    if (suppliers.get(i).length == userList.length) {
         let valid = compare(userList, suppliers.get(i));
         
         if (valid == true) {
-            validList.push(suppliers.get(i));
+            validList.push(i);
         }
     }
 }
-function continueBtn(){
     
-}

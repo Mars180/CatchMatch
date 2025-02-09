@@ -22,7 +22,7 @@
 
     <!-- Location Slider -->
     <div class="m-auto flex-col space-y-2 p-2 w-80 pt-4">
-      <input type="range" class="w-full" min="1" max="6" step="1" />
+      <input type="range" id="slider" class="w-full" min="5" max="30" step="5" value="5"/>
       <ul class="flex justify-between w-full px-[10px]">
         <li class="flex justify-center relative"><span class="absolute">5</span></li>
         <li class="flex justify-center relative"><span class="absolute">10</span></li>
@@ -34,13 +34,15 @@
     </div>
 
     <div class="flex justify-center pt-10">
-      <a href="http://127.0.0.1:5500/src/thirdPage.html" type="Button" class="text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow">Continue</a>
+      <a href="http://127.0.0.1:5500/src/thirdPage.html" type="Button" onclick="bizInfo(document.getElementById('slider').value)" class="text-[20px] font-[Georgia] text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-large rounded-full text-sm px-10 py-5 text-center me-2 mb-2 shadow">Continue</a>
     </div> 
   </div>
 </div>
 
 <script type="text/javascript" src="/src/backEnd.js"></script>
+<script>
 
+</script>
 
 </body>
 </html>
